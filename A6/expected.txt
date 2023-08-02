@@ -1,0 +1,629 @@
+start BOF procedures EOF
+BOF BOF
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID g
+LPAREN (
+params .EMPTY
+RPAREN )
+LBRACE {
+dcls .EMPTY
+statements .EMPTY
+RETURN return
+expr term : int
+term factor : int
+factor NUM : int
+NUM 1 : int
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID f
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID a : int
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID t : int
+BECOMES =
+NUM 10 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID s : int
+BECOMES =
+NUM 21 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID g : int
+BECOMES =
+NUM 100 : int
+SEMI ;
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID g : int
+BECOMES =
+expr expr MINUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID s : int
+MINUS -
+term factor : int
+factor ID : int
+ID t : int
+SEMI ;
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID g : int
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID max
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID a : int
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID answer : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+statements statements statement
+statements .EMPTY
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+GT >
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+SEMI ;
+RBRACE }
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID answer : int
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID average
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID a : int
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID sum : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID average : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID sum : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+PLUS +
+term factor : int
+factor ID : int
+ID b : int
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID average : int
+BECOMES =
+expr term : int
+term term SLASH factor : int
+term factor : int
+factor ID : int
+ID sum : int
+SLASH /
+factor NUM : int
+NUM 2 : int
+SEMI ;
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID average : int
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID max3
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID a : int
+COMMA ,
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT
+INT int
+ID b : int
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID c : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID answer : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+statements statements statement
+statements .EMPTY
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+GT >
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+GT >
+expr term : int
+term factor : int
+factor ID : int
+ID c : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID a : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID c : int
+SEMI ;
+RBRACE }
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GT expr
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+GT >
+expr term : int
+term factor : int
+factor ID : int
+ID c : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID answer : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID c : int
+SEMI ;
+RBRACE }
+RBRACE }
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID answer : int
+SEMI ;
+RBRACE }
+procedures procedure procedures
+procedure INT ID LPAREN params RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+ID getlast
+LPAREN (
+params paramlist
+paramlist dcl COMMA paramlist
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID begin : int*
+COMMA ,
+paramlist dcl
+dcl type ID
+type INT
+INT int
+ID size : int
+RPAREN )
+LBRACE {
+dcls .EMPTY
+statements .EMPTY
+RETURN return
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor LPAREN expr RPAREN : int*
+LPAREN (
+expr expr MINUS term : int*
+expr expr PLUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID begin : int*
+PLUS +
+term factor : int
+factor ID : int
+ID size : int
+MINUS -
+term factor : int
+factor NUM : int
+NUM 1 : int
+RPAREN )
+SEMI ;
+RBRACE }
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID begin : int*
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID size : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NULL SEMI
+dcls .EMPTY
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID copy : int*
+BECOMES =
+NULL NULL : int*
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID i : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID getlast : int
+BECOMES =
+NUM 10 : int
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID copy : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor NEW INT LBRACK expr RBRACK : int*
+NEW new
+INT int
+LBRACK [
+expr term : int
+term factor : int
+factor ID : int
+ID size : int
+RBRACK ]
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID i : int
+BECOMES =
+expr term : int
+term factor : int
+factor ID LPAREN arglist RPAREN : int
+ID max
+LPAREN (
+arglist expr COMMA arglist
+expr term : int
+term factor : int
+factor NUM : int
+NUM 1 : int
+COMMA ,
+arglist expr
+expr term : int
+term factor : int
+factor NUM : int
+NUM 1 : int
+RPAREN )
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor ID : int*
+ID copy : int*
+RPAREN )
+SEMI ;
+statement WHILE LPAREN test RPAREN LBRACE statements RBRACE
+WHILE while
+LPAREN (
+test expr LT expr
+expr term : int
+term factor : int
+factor ID : int
+ID i : int
+LT <
+expr term : int
+term factor : int
+factor ID : int
+ID size : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue STAR factor : int
+STAR *
+factor LPAREN expr RPAREN : int*
+LPAREN (
+expr expr PLUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID copy : int*
+PLUS +
+term factor : int
+factor ID : int
+ID i : int
+RPAREN )
+BECOMES =
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor LPAREN expr RPAREN : int*
+LPAREN (
+expr expr PLUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID begin : int*
+PLUS +
+term factor : int
+factor ID : int
+ID i : int
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID i : int
+BECOMES =
+expr expr MINUS term : int
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID i : int
+PLUS +
+term term PCT factor : int
+term term SLASH factor : int
+term term STAR factor : int
+term factor : int
+factor ID : int
+ID i : int
+STAR *
+factor ID : int
+ID i : int
+SLASH /
+factor ID : int
+ID i : int
+PCT %
+factor ID : int
+ID i : int
+MINUS -
+term factor : int
+factor ID : int
+ID i : int
+SEMI ;
+RBRACE }
+statement DELETE LBRACK RBRACK expr SEMI
+DELETE delete
+LBRACK [
+RBRACK ]
+expr term : int*
+term factor : int*
+factor ID : int*
+ID copy : int*
+SEMI ;
+RETURN return
+expr term : int
+term factor : int
+factor NUM : int
+NUM 0 : int
+SEMI ;
+RBRACE }
+EOF EOF

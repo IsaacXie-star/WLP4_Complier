@@ -1,0 +1,124 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a : int*
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NULL SEMI
+dcls .EMPTY
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID null : int*
+BECOMES =
+NULL NULL : int*
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement DELETE LBRACK RBRACK expr SEMI
+DELETE delete
+LBRACK [
+RBRACK ]
+expr term : int*
+term factor : int*
+factor ID : int*
+ID null : int*
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID null : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor ID : int*
+ID a : int*
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor ID : int*
+ID null : int*
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID null : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor AMP lvalue : int*
+AMP &
+lvalue ID : int
+ID b : int
+SEMI ;
+statement PRINTLN LPAREN expr RPAREN SEMI
+PRINTLN println
+LPAREN (
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor ID : int*
+ID null : int*
+RPAREN )
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID null : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor NULL : int*
+NULL NULL : int*
+SEMI ;
+statement DELETE LBRACK RBRACK expr SEMI
+DELETE delete
+LBRACK [
+RBRACK ]
+expr term : int*
+term factor : int*
+factor ID : int*
+ID null : int*
+SEMI ;
+statement DELETE LBRACK RBRACK expr SEMI
+DELETE delete
+LBRACK [
+RBRACK ]
+expr term : int*
+term factor : int*
+factor ID : int*
+ID null : int*
+SEMI ;
+RETURN return
+expr term : int
+term factor : int
+factor NUM : int
+NUM 0 : int
+SEMI ;
+RBRACE }
+EOF EOF

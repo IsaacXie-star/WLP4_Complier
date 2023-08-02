@@ -1,0 +1,6 @@
+int wain(int a, int b) {
+   int counter = 0;
+   int product = 0;
+   int nptr = NULL;
+   return product;
+}

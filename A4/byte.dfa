@@ -1,0 +1,50 @@
+.ALPHABET
+0-9
+-
+.STATES
+start
+s1
+s2
+s3
+s4
+s5
+s6
+s7
+s8
+s9
+s10
+s11
+s12
+s13
+s14
+s15
+s16
+s17
+s18
+s19
+s20
+s21
+.TRANSITIONS
+start - s1
+s1 1 s2
+s1 2-9 s19
+s19 0-9 s20
+s12 6-9 s21
+s2 0-1 s3
+s3 0-9 s5
+s2 3-9 s4
+s2 2 s6
+s6 0-8 s7
+start 0 s8
+start 1 s9
+s9 0-9 s10
+s10 0-9 s11
+start 2 s12
+s12 0-4 s13
+s13 0-9 s14
+s12 5 s15
+s15 0-5 s16
+start 3-9 s17
+s17 0-9 s18
+.INPUT
+258

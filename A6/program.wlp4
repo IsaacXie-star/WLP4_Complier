@@ -1,0 +1,61 @@
+int g() {return 1; }
+int f(int a, int b) { 
+  int t = 10;
+  int s = 21;
+  int g = 100;
+  g = s - t;
+  return g; 
+}
+int max(int a, int b){
+  int answer = 0;
+  if (a > b){
+    answer = a;
+  } else {
+    answer = b;
+  }
+  return answer;
+}
+int average(int a, int b){
+  int sum = 0;
+  int average = 0;
+  sum = a + b;
+  average = sum / 2;
+  return average;
+}
+
+int max3(int a, int b, int c){
+  int answer = 0;
+  if (a > b) {
+    if (a > c) {
+      answer = a;
+    } else {
+      answer = c;
+    }
+  } else {
+    if (b > c){
+      answer = b;
+    } else {
+      answer = c;
+    }
+  }
+  return answer;
+}
+
+int getlast(int* begin, int size){
+  return *(begin + size - 1); 
+}
+
+int wain(int* begin, int size){
+  int* copy = NULL;
+  int i = 0;
+  int getlast = 10;
+  copy = new int[size];
+  i = max(1, 1);
+  println(*copy);
+  while(i < size) {
+    *(copy+i) = *(begin+i);
+    i = i + i * i / i % i - i;
+  }
+  delete [] copy;
+  return 0;
+}

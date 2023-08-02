@@ -1,0 +1,12 @@
+start → BOF procedures EOF
+procedures → main
+main → INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE 
+type → INT
+dcl → type ID
+dcls →
+statements →
+expr → term 
+term → factor 
+factor → NUM  
+factor → ID
+factor → LPAREN expr RPAREN

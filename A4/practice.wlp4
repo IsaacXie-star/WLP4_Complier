@@ -1,0 +1,82 @@
+int max(int a, int b) {
+    int res = 0;
+    if (a > b) {
+        res = a;
+    } else {
+        res = b;
+    }
+    return res;
+}
+
+int tieBreak(int a, int b) {
+    int c = 0;
+    int d = 0;
+    int res = 0;
+    if (a < 0) {
+        c = 0 - a;
+    } else {
+        c = a;
+    }
+    if (b < 0) {
+        d = 0 - b;
+    } else {
+        d = b;
+    }
+
+    if (c < d) {
+        res = a;
+    } else {
+        if (c == d) {
+            if (a < 0) {
+                res = a;
+            } else {
+                res = b;
+            }
+        } else {
+            res = b;
+        }
+    }
+    return res;
+}
+
+int wain(int* begin, int size) {
+    int res = 100000;
+    int N = 500;
+    int* cntArr = NULL;
+    int offset = 241;
+    int i = 0;
+    int val = 0;
+    int maxFreq = 0;
+    int freq = 0;
+
+    cntArr = new int[N];
+
+    while (i < N) {
+        *(cntArr + i) = 0;
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < size) {
+        val = *(begin + i);
+        val = val + offset;
+        *(cntArr + val) = *(cntArr + val) + 1;
+        maxFreq = max(maxFreq, *(cntArr + val));
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < N) {
+        freq = *(cntArr + i);
+        if (freq == maxFreq) {
+            if (res == 100000) {
+                res = i - offset;
+            } else {
+                res = tieBreak(res, i - offset);
+            }
+        } else {}
+        i = i + 1;
+    }
+    
+    return res;
+}

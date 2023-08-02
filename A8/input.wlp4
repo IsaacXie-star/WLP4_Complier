@@ -1,0 +1,12 @@
+int wain(int* a, int b) {
+  int* null = NULL;
+  delete [] null;
+  null = a;
+  println(*null);
+  null = &b;
+  println(*null);
+  null = NULL;
+  delete [] null;
+  delete [] null;
+  return 0;
+}

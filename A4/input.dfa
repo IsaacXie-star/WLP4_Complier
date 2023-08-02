@@ -1,0 +1,18 @@
+.ALPHABET
+a-b d-r t-z
+c s
+.STATES
+start!
+seen_c
+seen_cs!
+.TRANSITIONS
+start   a b d-z  start
+start   c        seen_c
+seen_c  a-r t-z  start
+seen_c  s        seen_cs
+seen_cs a-z      seen_cs
+.INPUT
+hellocsstudents
+.EMPTY
+lyrics
+cstwofourone bstwofournone

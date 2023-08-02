@@ -1,0 +1,12 @@
+int wain(int* begin, int size){
+  int* copy = NULL;
+  int i = 0;
+  copy = new int[size];
+  while(i < size) {
+    *(copy+i) = *(begin+i);
+    i = i + 1;
+  }
+  delete [] copy;
+  return 0;
+}
+
